@@ -21,5 +21,7 @@ app.get("/api/eta/:stopId", (req, res) => {
   res.json({ stopId: req.params.stopId, eta });
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Backend running on port ${port}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
